@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>internet</title>
+    <link href="../extensions/bootstrap.css" rel="stylesheet" >
+    <link rel="stylesheet" href="../theme/winbox.styles.css">
+    <link rel="stylesheet" href="../theme/styles.css">
+    <link rel="icon" type="image/x-icon" href="/assets/button.png">
+    <style>a {
+        color: black;
+        text-decoration: none; /* no underline */
+    }</style>
+</head>
+<body class="">
+    <div class="container">
+        <div class="row text-center bg-primary border-bottom border-2 border-dark">
+            <div class="col text-start">
+                bookmarks:
+            </div>
+            <div class="col">
+                <a>ev01.to</a>
+            </div>
+            <div class="col">
+                <a>animixplay.to</a>
+            </div>
+            <div class="col">
+                <a href="http://yewtu.be">yewtu.be</a>
+            </div>
+        </div>
+        <div class="row p-5">
+            <h1 class="text-primary text-center">Gogl</h1>
+            <input id="search" onkeyup="refresh()" class="bg-secondary rounded-0 rounded-top form-control" type="text" placeholder="Search" aria-label="Search">
+
+            <ul id="list" class="list-group list-group-flush border border-dark border-2 rounded-0 rounded-bottom mt-1 p-0">
+                <li class="list-group-item list-group-item-action">
+                    <a href="#">
+                        <div class="d-flex w-100 justify-content-between">
+                            <h5 class="mb-1">List group item heading</h5>
+                        </div>
+                        <p class="mb-1">Some placeholder content in a paragraph.</p>
+                    </a>
+                </li>
+
+
+            </ul>
+        </div>
+    </div>
+    <script>
+        function refresh() {
+            let input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById("search");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("list");
+            li = ul.getElementsByTagName("li");
+            for (i = 0; i < li.length; i++) {
+                a = li[i].getElementsByTagName("a")[0];
+                txtValue = a.textContent || a.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
