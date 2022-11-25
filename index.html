@@ -3,29 +3,34 @@
         <title>thief</title>
         <link href="extensions/bootstrap.css" rel="stylesheet" >
         <style>
-            .fixed-bottom-nav { position: fixed; bottom: 0; left: 0; width: 100%}
+            .row-fixed-bottom { position: fixed; bottom: 0; left: 0; width: 100%}
         </style>
     </head>
     <body class="bg-info" style="height: 100vh;">
         <div class="container">
-
             <div class="row">
                 Desktop
             </div>
 
-            <nav class="fixed-bottom-nav">
-                <div class="text-center mb-3">
-                    <span class="grid gx-2 text-center rounded bg-danger p-2">
-                        <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                            Start
-                        </a>
-                        <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                            Start
-                        </a>
-                        <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                            Start
-                        </a>
-                    </span>
+            <nav class="row-fixed-bottom">
+                <div class="container">
+                    <div class="row row-cols-auto rounded bg-danger mx-auto" style="width:  fit-content">
+                        <div class="col">
+                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
+                                Start
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
+                                Start
+                            </a>
+                        </div>
+                        <div class="col">
+                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
+                                Start
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
