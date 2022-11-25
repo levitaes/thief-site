@@ -4,7 +4,7 @@ function terminalApp () {
         x: "center",
         y: "center",
         width: "50%",
-        height: "40%",
+        height: "45%",
         url: "https://thief.lerchen.net/OS.js/",
     });
 }
@@ -14,7 +14,7 @@ function internetApp () {
         title: "Internet",
         x: "center",
         y: "center",
-        width: "65%",
+        width: "590px",
         height: "50%",
         url: "apps/internet.app.html",
     });
