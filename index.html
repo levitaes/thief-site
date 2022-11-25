@@ -4,31 +4,25 @@
         <link href="extensions/bootstrap.css" rel="stylesheet" >
         <style>
             .row-fixed-bottom { position: fixed; bottom: 0; left: 0; width: 100%}
+            .app:hover{
+
+            }
         </style>
+        <script src="https://kit.fontawesome.com/62eec38a1e.js" crossorigin="anonymous"></script>
     </head>
-    <body class="bg-info" style="height: 100vh;">
+    <body class="bg-primary" style="height: 100vh;">
         <div class="container">
             <div class="row">
                 Desktop
             </div>
-
-            <nav class="row-fixed-bottom">
+            <nav class="row-fixed-bottom"><!--TODO: Add magnification with array-->
                 <div class="container">
-                    <div class="row row-cols-auto rounded bg-danger mx-auto" style="width:  fit-content">
-                        <div class="col">
-                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                                Start
-                            </a>
+                    <div class="row row-cols-auto rounded-pill bg-danger mx-auto gx-3 p-1" style="width:  fit-content">
+                        <div class="app p-1 rounded col">
+                            <i class="fa fa-terminal" onclick="testfunc()"></i>
                         </div>
-                        <div class="col">
-                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                                Start
-                            </a>
-                        </div>
-                        <div class="col">
-                            <a class="rounded bg-success" href="javascript:void(0);" onclick="testfunc()">
-                                Start
-                            </a>
+                        <div class="app p-1 rounded col">
+                            <i class="fa fa-file" onclick="testfunc()"></i>
                         </div>
                     </div>
                 </div>
