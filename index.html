@@ -2,27 +2,30 @@
     <head>
         <title>thief</title>
         <link href="extensions/bootstrap.css" rel="stylesheet" >
-        <style>
-            .app:hover{}
-        </style>
+        <link rel="stylesheet" href="theme/winbox.styles.css">
     </head>
-    <body onload="getTime()" class="bg-primary" style="height: 100vh;">
+    <body onload="getTime()" style="height: 100vh; background-image: url('assets/bg.png')">
         <div class="container mt-3">
-            <div class="row border border-2 border-dark rounded-pill bg-secondary mx-auto p-1">
-                <div class="col">Start</div>
+            <div class="row border border-2 border-dark bg-primary rounded-pill mx-auto p-1">
+                <div class="col" onclick="terminalApp()">Start</div>
                 <div class="col text-center">Thief's Desktop</div>
                 <div class="col text-end" id="livetime">time</div>
-
             </div>
             <div class="row">
-
             </div>
         </div>
     </body>
     <script src="extensions/winbox.bundle.min.js" async></script>
     <script defer>
-        function app1 () {
-            new WinBox("Basic Window");
+        function terminalApp () {
+            new WinBox({
+                title: "Terminal",
+                x: "center",
+                y: "center",
+                width: "50%",
+                height: "50%",
+                url: "https://thief.lerchen.net/OS.js/",
+            });
         }
 
         function timeTimer(){
@@ -31,7 +34,9 @@
 
         function getTime() {
             let date = new Date();
-            document.getElementById("livetime").innerHTML = date.getHours()+":"+date.getMinutes(); timeTimer();
+            let minutes = date.getMinutes().toString();
+            if (minutes.length <=1) minutes = '0' + minutes;
+            document.getElementById("livetime").innerHTML = date.getHours()+":"+minutes; timeTimer();
         }
     </script>
 </html>

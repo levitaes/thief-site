@@ -1,0 +1,30 @@
+.winbox {
+    background: rgb(250, 240, 230);
+    border: 2px solid black;
+    border-radius: 11px;
+}
+
+.wb-title {
+    color: black;
+}
+
+.wb-body {
+    margin: 5px;
+    border: 2px solid black;
+}
+
+.wb-close {
+    background-image: url("../assets/button.png");
+}
+
+.wb-min {
+    display: none;
+}
+
+.wb-max {
+    display: none;
+}
+
+.wb-full {
+    display: none;
+}
