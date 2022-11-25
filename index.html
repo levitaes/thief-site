@@ -1,42 +1,54 @@
 <html lang="en">
     <head>
-        <title>thief</title>
+        <title>Thief</title>
         <link href="extensions/bootstrap.css" rel="stylesheet" >
         <link rel="stylesheet" href="theme/winbox.styles.css">
+        <link rel="stylesheet" href="theme/styles.css">
+        <link rel="icon" type="image/x-icon" href="/assets/button.png">
     </head>
-    <body onload="getTime()" style="height: 100vh; background-image: url('assets/bg.png')">
-        <div class="container mt-3">
+    <body class="prevent-select prevent-scroll" onload="getTime()" style="height: 100vh; background-image: url('assets/bg.png')">
+        <div class="container h-100 d-table">
+            <div class="row mb-2"></div>
             <div class="row border border-2 border-dark bg-primary rounded-pill mx-auto p-1">
-                <div class="col" onclick="terminalApp()">Start</div>
+                <div class="col">Start</div>
                 <div class="col text-center">Thief's Desktop</div>
                 <div class="col text-end" id="livetime">time</div>
             </div>
-            <div class="row">
+            <div class="row mt-5">
+                <div class="col">
+                    <div class="app text-center" onclick="terminalApp()">
+                        <img src="assets/desktop.png" alt="Terminal">
+                        <br><label>Terminal</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <div class="app text-center" onclick="">
+                        <img src="assets/folder.png" alt="Files">
+                        <br><label>Files</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col">
+                    <div class="app text-center" onclick="">
+                        <img src="assets/internet.png" alt="Internet">
+                        <br><label>Internet</label>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-1 d-table-row">
+                <div class="col p-0">
+                    <div class="app text-center" onclick="">
+                        <img src="assets/trashbin.png" alt="Trash">
+                        <br><label>Trash</label>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
     <script src="extensions/winbox.bundle.min.js" async></script>
-    <script defer>
-        function terminalApp () {
-            new WinBox({
-                title: "Terminal",
-                x: "center",
-                y: "center",
-                width: "50%",
-                height: "50%",
-                url: "https://thief.lerchen.net/OS.js/",
-            });
-        }
-
-        function timeTimer(){
-            setTimeout('getTime()',1000);
-        }
-
-        function getTime() {
-            let date = new Date();
-            let minutes = date.getMinutes().toString();
-            if (minutes.length <=1) minutes = '0' + minutes;
-            document.getElementById("livetime").innerHTML = date.getHours()+":"+minutes; timeTimer();
-        }
-    </script>
+    <script src="code/winbox.apps.js"></script>
+    <script src="code/desktop.logic.js"></script>
 </html>
