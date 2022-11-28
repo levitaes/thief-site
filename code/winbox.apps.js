@@ -5,7 +5,7 @@ function terminalApp () {
         y: "center",
         width: "50%",
         height: "45%",
-        url: "https://thief.lerchen.net/OS.js/",
+        url: "https://thief.lerchen.net/thief-os/",
     });
 }
 
