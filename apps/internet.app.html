@@ -1,39 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <title>internet</title>
-    <link href="../extensions/bootstrap.css" rel="stylesheet" >
-    <link rel="stylesheet" href="../theme/winbox.styles.css">
-    <link rel="stylesheet" href="../theme/styles.css">
-    <link rel="icon" type="image/x-icon" href="/assets/button.png">
-    <meta charset="UTF-8">
-    <style>a {
-        color: black;
-        text-decoration: none; /* no underline */
-    }
-    a:hover {color: black}
-    h1 {
-        -webkit-text-stroke: 2px black; /* width and color */
-        font-size: 50px
-    }
-    </style>
-</head>
-<body class="">
-    <div class="container">
-        <div class="row text-center bg-primary border-bottom border-2 border-dark">
+    <head>
+        <title>internet</title>
+        <link href="../extensions/bootstrap.css" rel="stylesheet" >
+        <meta charset="UTF-8">
+
+        <style>
+            body {
+                background: #ccdcd6;
+            }
+            a {
+            color: black;
+            text-decoration: none; /* no underline */
+        }
+            a:hover {color: black}
+            h1 {
+                -webkit-text-stroke: 2px black; /* width and color */
+                font-size: 50px
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            .content {
+                scrollbar-width: 0;
+            }
+        </style>
+    </head>
+    <body class="content">
+    <div class="text-center bg-primary border-bottom border-2 border-dark overflow-hidden">
+        <div class="row">
             <div class="col text-start">
-                bookmarks:
+            bookmarks:
             </div>
-            <div class="col">
+            <div class="col text-start">
                 <a target="_parent" href="https://ev01.to">ev01.to</a>
             </div>
-            <div class="col">
+            <div class="col text-start">
                 <a target="_parent" href="https://animixplay.to">animixplay.to</a>
             </div>
-            <div class="col">
+            <div class="col text-start">
                 <a target="_parent" href="https://yewtu.be">yewtu.be</a>
-            </div>
-        </div>
+            </div></div>
+
+    </div>
+    <div class="container">
         <div class="row p-5">
             <h1 class="text-primary text-center">Gogl</h1>
             <input id="search" onkeyup="refresh()" class="bg-primary rounded-0 rounded-top form-control" type="text" placeholder="Search" aria-label="Search">
