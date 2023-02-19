@@ -32,3 +32,14 @@ function filesApp () {
         url: "apps/files.app.html",
     });
 }
+
+function musicApp () {
+    new WinBox({
+        title: "Music",
+        x: "center",
+        y: "center",
+        width: "450px",
+        height: "50%",
+        url: "apps/music.app.html",
+    });
+}
