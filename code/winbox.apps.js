@@ -10,12 +10,14 @@ function terminalApp () {
 }
 
 function internetApp () {
+
+
     new WinBox({
         title: "Internet",
         x: "center",
         y: "center",
-        width: "50%",
-        height: "60%",
+        width: "60%",
+        height: document.body.clientWidth/2.5,
         url: "apps/internet.app.html",
     });
 }
@@ -25,9 +27,8 @@ function filesApp () {
         title: "Files",
         x: "center",
         y: "center",
-        width: "590px",
+        width: "450px",
         height: "50%",
-        url: "apps/internet.app.html",
+        url: "apps/files.app.html",
     });
 }
-
