@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
     <title>music</title>
+    <link href="../extensions/bootstrap.css" rel="stylesheet" >
     <meta charset="UTF-8">
     <style>
-        body {
-            background: #ccdcd6;
-        }
         a {
             color: black;
             text-decoration: none; /* no underline */
@@ -14,17 +12,10 @@
         a:hover {color: black}
         h1 {
             -webkit-text-stroke: 2px black; /* width and color */
-            font-size: 50px
+            font-size: 50px;
         }
     </style>
     <style>
-        body {
-            background-color: #ccdcd6;
-
-            /* Smoothly transition the background color */
-            transition: background-color .5s;
-        }
-
         .player {
             height: 95vh;
             display: flex;
@@ -45,21 +36,29 @@
         }
 
         .now-playing {
-            font-size: 1rem;
         }
 
         .track-name {
-            font-size: 3rem;
+            font-size: 1.8rem;
         }
 
         .track-artist {
-            font-size: 1.5rem;
+            text-align: left;
         }
 
         .buttons {
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: center;
+        }
+
+        .media-controls {
+            
+        }
+
+        .fa {
+            color: black;
         }
 
         .playpause-track,
@@ -79,11 +78,13 @@
         }
 
         .slider_container {
-            width: 75%;
             max-width: 400px;
             display: flex;
+            margin: auto;
             justify-content: center;
             align-items: center;
+            width: 85%;
+            font-size: .8rem;
         }
 
         /* Modify the appearance of the slider */
@@ -94,9 +95,6 @@
             appearance: none;
             height: 5px;
             background: black;
-            opacity: 0.7;
-            -webkit-transition: .2s;
-            transition: opacity .2s;
         }
 
         /* Modify the appearance of the slider thumb */
@@ -105,8 +103,8 @@
             -webkit-appearance: none;
             -moz-appearance: none;
             appearance: none;
-            width: 15px;
-            height: 15px;
+            width: 10px;
+            height: 10px;
             background: black;
             cursor: pointer;
             border-radius: 50%;
@@ -122,7 +120,7 @@
         }
 
         .volume_slider {
-            width: 30%;
+            width: 45%;
         }
 
         .current-time,
@@ -145,29 +143,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 
 </head>
-    <body>
+    <body class="content bg-light">
         <div class="player">
             <div class="details">
-                <div class="now-playing">PLAYING x OF y</div>
+                <div class="now-playing">x of y</div>
                 <div class="track-art"></div>
                 <div class="track-name">Track Name</div>
                 <div class="track-artist">Track Artist</div>
             </div>
-            <div class="buttons">
-                <div class="prev-track" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
-                <div class="playpause-track" onclick="playpauseTrack()"><i class="fa fa-play-circle fa-5x"></i></div>
-                <div class="next-track" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+            <div class="media-controls">
+                <div class="slider_container">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+                    <div class="total-duration">00:00</div>
+                </div>
+                <div class="buttons">
+                    <div class="prev-track p-3" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                    <div class="playpause-track p-3 pt-1 pb-1" onclick="playpauseTrack()"><i class="fa fa-play fa-2x"></i></div>
+                    <div class="next-track p-3" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                </div>
+                <div class="slider_container">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="0" max="20" value="10" class="volume_slider" onchange="setVolume()">
+                    <i class="fa fa-volume-up"></i>
+                </div>
             </div>
-            <div class="slider_container">
-                <div class="current-time">00:00</div>
-                <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
-                <div class="total-duration">00:00</div>
-            </div>
-            <div class="slider_container">
-                <i class="fa fa-volume-down"></i>
-                <input type="range" min="0" max="20" value="10" class="volume_slider" onchange="setVolume()">
-                <i class="fa fa-volume-up"></i>
-            </div>
+            
         </div>
 
         <!-- Main script for the player -->
@@ -221,7 +222,7 @@
                 track_art.style.backgroundImage = "url(" + track_list[track_index].image + ")";
                 track_name.textContent = track_list[track_index].name;
                 track_artist.textContent = track_list[track_index].artist;
-                now_playing.textContent = "PLAYING " + (track_index + 1) + " OF " + track_list.length;
+                now_playing.textContent = (track_index + 1) + " of " + track_list.length;
 
                 // Set an interval of 1000 milliseconds for updating the seek slider
                 updateTimer = setInterval(seekUpdate, 1000);
@@ -242,10 +243,9 @@
 
                 // Construct a color withe the given values
                 //let bgColor = "rgb(" + red + "," + green + "," + blue + ")";
-                let bgColor = "#ccdcd6";
 
                 // Set the background to that color
-                document.body.style.background = bgColor;
+                //document.body.style.background = bgColor;
             }
 
             // Reset Values
@@ -266,7 +266,7 @@
                 isPlaying = true;
 
                 // Replace icon with the pause icon
-                playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+                playpause_btn.innerHTML = '<i class="fa fa-solid fa-pause fa-2x"></i>';
             }
 
             function pauseTrack() {
@@ -274,7 +274,7 @@
                 isPlaying = false;
 
                 // Replace icon with the play icon
-                playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';;
+                playpause_btn.innerHTML = '<i class="fa fa-solid fa-play fa-2x"></i>';;
             }
 
             function nextTrack() {

@@ -10,13 +10,11 @@ function terminalApp () {
 }
 
 function internetApp () {
-
-
     new WinBox({
         title: "Internet",
         x: "center",
         y: "center",
-        width: "60%",
+        width: "55%",
         height: document.body.clientWidth/2.5,
         url: "apps/internet.app.html",
     });

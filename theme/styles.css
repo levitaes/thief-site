@@ -10,7 +10,7 @@ img {
 }
 .app:hover {
     border: 3px solid rgba(0, 0, 0, .1);
-    background: rgba(180, 213, 210, .35);
+    background: rgba(149, 169, 180, 0.35);
 }
 
 .prevent-select {
