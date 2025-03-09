@@ -63,9 +63,9 @@ function aboutApp () {
         title: "About",
         icon: "assets/human.png",
         x: "100px",
-        y: "100px",
-        width: "300px",
-        height: "200px",
+        y: "150px",
+        width: "400px",
+        height: "300px",
         url: "apps/about.app.html",
     });
 }
