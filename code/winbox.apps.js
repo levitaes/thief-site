@@ -6,6 +6,8 @@ function terminalApp () {
         y: "center",
         width: "500px",
         height: "45%",
+        minwidth: "400px",
+        minheight: "300px",
         url: "https://thief.lerchen.net/thief-os/",
     });
 }
@@ -17,6 +19,8 @@ function internetApp () {
         x: "center",
         y: "center",
         width: "55%",
+        minwidth: "500px",
+        minheight: "300px",
         height: document.body.clientWidth/2.5,
         url: "apps/internet.app.html",
     });
@@ -28,8 +32,12 @@ function filesApp () {
         icon: "assets/folder.png",
         x: "center",
         y: "center",
-        width: "550px",
-        height: "55%",
+        width: "500px",
+        height: "500px",
+        maxwidth: "570px",
+        maxheight: "550px",
+        minwidth: "320px",
+        minheight: "330px",
         url: "apps/files.app.html",
     });
 }
@@ -52,8 +60,10 @@ function musicApp () {
         icon: "assets/music.png",
         x: "center",
         y: "center",
-        width: "450px",
-        height: "45%",
+        width: "400px",
+        height: "300px",
+        minwidth: "400px",
+        minheight: "300px",
         url: "apps/music.app.html",
     });
 }
@@ -66,6 +76,11 @@ function aboutApp () {
         y: "150px",
         width: "400px",
         height: "300px",
+        maxwidth: "400px",
+        maxheight: "300px",
+        minwidth: "400px",
+        minheight: "300px",
         url: "apps/about.app.html",
+        resizable: false,
     });
 }
