@@ -19,7 +19,6 @@
         .player {
             height: 95vh;
             display: flex;
-            align-items: center;
             flex-direction: column;
             justify-content: center;
         }
@@ -116,11 +115,11 @@
         }
 
         .seek_slider {
-            width: 60%;
+            width: 400px;
         }
 
         .volume_slider {
-            width: 45%;
+            width: 100px;
         }
 
         .current-time,
@@ -158,9 +157,9 @@
                     <div class="total-duration">00:00</div>
                 </div>
                 <div class="buttons">
-                    <div class="prev-track p-3" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
-                    <div class="playpause-track p-3 pt-1 pb-1" onclick="playpauseTrack()"><i class="fa fa-play fa-2x"></i></div>
-                    <div class="next-track p-3" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                    <div class="prev-track pt-1 pb-1" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
+                    <div class="playpause-track px-4 pt-0 pb-0" onclick="playpauseTrack()"><i class="fa fa-play fa-2x"></i></div>
+                    <div class="next-track pt-2 pb-2" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
                 </div>
                 <div class="slider_container">
                     <i class="fa fa-volume-down"></i>
@@ -218,7 +217,7 @@
                     name: "Sleepless (Cover)",
                     artist: "Levitaes",
                     image: "https://images.pexels.com/photos/3100835/pexels-photo-3100835.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=250&w=250",
-                    path: "../assets/Sleepless.mp3"
+                    path: "../assets/Sleepless.m4a"
                 },
             ];
 

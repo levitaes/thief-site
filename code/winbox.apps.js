@@ -48,7 +48,7 @@ function musicApp () {
         x: "center",
         y: "center",
         width: "450px",
-        height: "50%",
+        height: "45%",
         url: "apps/music.app.html",
     });
 }
