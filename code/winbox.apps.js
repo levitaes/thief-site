@@ -31,6 +31,17 @@ function filesApp () {
     });
 }
 
+function trashApp () {
+    new WinBox({
+        title: "Trash",
+        x: "center",
+        y: "center",
+        width: "550px",
+        height: "55%",
+        url: "apps/trash.app.html",
+    });
+}
+
 function musicApp () {
     new WinBox({
         title: "Music",
