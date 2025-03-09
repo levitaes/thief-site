@@ -25,8 +25,8 @@ function filesApp () {
         title: "Files",
         x: "center",
         y: "center",
-        width: "450px",
-        height: "50%",
+        width: "550px",
+        height: "55%",
         url: "apps/files.app.html",
     });
 }
