@@ -61,11 +61,11 @@ function musicApp () {
 function aboutApp () {
     new WinBox({
         title: "About",
-        icon: "assets/me.png",
-        html: "<h1>Lorem Ipsum</h1>",
+        icon: "assets/human.png",
         x: "100px",
         y: "100px",
         width: "300px",
-        height: "200px"
+        height: "200px",
+        url: "apps/about.app.html",
     });
 }

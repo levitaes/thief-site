@@ -1,3 +1,11 @@
+a {
+    color: black;
+    text-decoration: none; /* no underline */
+}
+a:hover {
+    color: black
+}
+
 img {
     width: 50px;
 }
