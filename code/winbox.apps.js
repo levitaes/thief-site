@@ -4,7 +4,7 @@ function terminalApp () {
         icon: "assets/desktop.png",
         x: "center",
         y: "center",
-        width: "500px",
+        width: "550px",
         height: "45%",
         minwidth: "400px",
         minheight: "300px",
