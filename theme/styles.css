@@ -20,7 +20,11 @@ img {
     background: rgba(149, 169, 180, 0.35);
 }
 
-.app-style {
+.app-left {
+    float: left;
+}
+
+.app-right {
     float: right;
 }
 
