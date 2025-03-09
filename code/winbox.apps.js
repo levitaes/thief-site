@@ -1,6 +1,7 @@
 function terminalApp () {
     new WinBox({
         title: "Terminal",
+        icon: "assets/desktop.png",
         x: "center",
         y: "center",
         width: "500px",
@@ -12,6 +13,7 @@ function terminalApp () {
 function internetApp () {
     new WinBox({
         title: "Internet",
+        icon: "assets/internet.png",
         x: "center",
         y: "center",
         width: "55%",
@@ -23,6 +25,7 @@ function internetApp () {
 function filesApp () {
     new WinBox({
         title: "Files",
+        icon: "assets/folder.png",
         x: "center",
         y: "center",
         width: "550px",
@@ -34,6 +37,7 @@ function filesApp () {
 function trashApp () {
     new WinBox({
         title: "Trash",
+        icon: "assets/trashbin.png",
         x: "center",
         y: "center",
         width: "550px",
@@ -45,10 +49,23 @@ function trashApp () {
 function musicApp () {
     new WinBox({
         title: "Music",
+        icon: "assets/music.png",
         x: "center",
         y: "center",
         width: "450px",
         height: "45%",
         url: "apps/music.app.html",
+    });
+}
+
+function aboutApp () {
+    new WinBox({
+        title: "About",
+        icon: "assets/me.png",
+        html: "<h1>Lorem Ipsum</h1>",
+        x: "100px",
+        y: "100px",
+        width: "300px",
+        height: "200px"
     });
 }
