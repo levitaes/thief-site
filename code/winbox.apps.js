@@ -49,8 +49,20 @@ function trashApp () {
         x: "center",
         y: "center",
         width: "550px",
-        height: "55%",
+        height: "500px",
         url: "apps/trash.app.html",
+    });
+}
+
+function uniApp () {
+    new WinBox({
+        title: "h-da",
+        icon: "assets/uni.png",
+        x: "center",
+        y: "center",
+        width: "550px",
+        height: "500px",
+        url: "apps/uni.app.html",
     });
 }
 
