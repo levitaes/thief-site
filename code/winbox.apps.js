@@ -68,9 +68,9 @@ function trashApp () {
     });
 }
 
-function notesApp () {
+function testApp () {
     new WinBox({
-        title: "Notes",
+        title: "test",
         icon: "assets/notes.png",
         x: "center",
         y: "center",
