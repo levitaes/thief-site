@@ -29,7 +29,7 @@ function internetApp () {
 function videosApp () {
     new WinBox({
         title: "Videos",
-        icon: "assets/play.png",
+        icon: "assets/videos.png",
         x: "center",
         y: "center",
         width: "600px",
