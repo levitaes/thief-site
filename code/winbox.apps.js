@@ -68,15 +68,17 @@ function trashApp () {
     });
 }
 
-function testApp () {
+function todoApp () {
     new WinBox({
-        title: "test",
-        icon: "assets/notes.png",
+        title: "ToDo",
+        icon: "assets/todo.png",
         x: "center",
         y: "center",
         width: "550px",
         height: "500px",
-        url: "apps/notes.app.html",
+        minwidth: "150px",
+        minheight: "210px",
+        url: "apps/todo.app.html",
     });
 }
 

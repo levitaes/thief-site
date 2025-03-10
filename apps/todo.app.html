@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>test</title>
+        <link href="../extensions/bootstrap.css" rel="stylesheet" >
+        <meta charset="UTF-8">
+        <style>
+            a {
+                color: black;
+            }
+            a:hover {color: black}
+            ::-webkit-scrollbar {
+                display: none;
+            }
+            .content {
+                scrollbar-width: 0;
+            }
+            ul li {
+                cursor: pointer;
+                position: relative;
+                padding: 12px 8px 12px 40px;
+                list-style-type: none;
+                background: rgb(249, 245, 241); 
+                font-size: 18px;
+                transition: 0.2s;
+                
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+            ul li.checked {
+                text-decoration: line-through;
+            }
+            ul li.checked:hover {
+                text-decoration: line-through;
+                color: black;
+            }
+            ul li.checked::before {
+                content: '';
+                position: absolute;
+                border-color: black;
+                border-style: solid;
+                border-width: 0 2px 2px 0;
+                top: 15px;
+                left: 16px;
+                transform: rotate(45deg);
+                height: 15px;
+                width: 7px;
+            }
+            .close {
+                position: absolute;
+                right: 0;
+                top: 0;
+                padding: 8px 16px 12px 16px;
+            }
+        </style>
+    </head>
+    <body class="bg-light">
+        <div class="container">
+            <div class="row mt-2">
+                <div class="col">
+                    <input id="textInput" id="search" class="bg-primary mt-2 rounded-0 rounded-top form-control" type="text" placeholder="buy fish.." aria-label="ToDo">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <ul id="unorderedList" class="list-group list-group-flush border border-dark border-2 rounded-0 rounded-bottom mt-1 p-0 bg-primary mb-3" style="min-height: 5px;">
+                        <li class="list-group-item list-group-item-action bg-secondary">test</li>
+                        <li class="list-group-item list-group-item-action bg-secondary">test</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            textInput.addEventListener("keypress", function(event) {  
+                if (event.key === "Enter") {
+                    newElement();
+
+                }
+            });
+            var nodeList = document.getElementsByTagName("LI");
+            var i;
+            for(i = 0; i < nodeList.length; i++) {
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                nodeList[i].appendChild(span);
+            }
+            var close = document.getElementsByClassName("close");
+            var i;
+            for (i = 0; i < close.length; i++) {
+                close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                }
+            }
+
+            var list = document.querySelector('ul');
+            list.addEventListener('click', function(ev) {
+                if (ev.target.tagName === 'LI') {
+                    ev.target.classList.toggle('checked');
+                }
+            }, false);
+
+            function newElement() {
+                var li = document.createElement("li");
+                li.classList.add("list-group-item", "list-group-item-action", "bg-secondary");
+                var inputValue = document.getElementById("textInput").value;
+                var t = document.createTextNode(inputValue);
+                li.appendChild(t);
+                if (inputValue === '') {
+                    ;
+                } else {
+                    document.getElementById("unorderedList").appendChild(li);
+                }
+                document.getElementById("textInput").value = "";
+
+                var span = document.createElement("SPAN");
+                var txt = document.createTextNode("\u00D7");
+                span.className = "close";
+                span.appendChild(txt);
+                li.appendChild(span);
+
+                for (i = 0; i < close.length; i++) {
+                    close[i].onclick = function() {
+                    var div = this.parentElement;
+                    div.style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
