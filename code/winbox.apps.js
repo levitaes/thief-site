@@ -26,6 +26,20 @@ function internetApp () {
     });
 }
 
+function videosApp () {
+    new WinBox({
+        title: "Videos",
+        icon: "assets/play.png",
+        x: "center",
+        y: "center",
+        width: "55%",
+        minwidth: "500px",
+        minheight: "300px",
+        height: document.body.clientWidth/2.5,
+        url: "apps/videos.app.html",
+    });
+}
+
 function filesApp () {
     new WinBox({
         title: "Files",
