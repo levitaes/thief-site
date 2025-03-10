@@ -153,9 +153,9 @@
                     <div class="total-duration">00:00</div>
                 </div>
                 <div class="buttons">
-                    <div class="prev-track pt-1 pb-1" onclick="prevTrack()"><i class="fa fa-step-backward fa-2x"></i></div>
-                    <div class="playpause-track px-4 pt-0 pb-0" onclick="playpauseTrack()"><i class="fa fa-play fa-2x"></i></div>
-                    <div class="next-track pt-2 pb-2" onclick="nextTrack()"><i class="fa fa-step-forward fa-2x"></i></div>
+                    <div class="prev-track pt-1 pb-1" onclick="prevTrack()"><img width="50px" src="../assets/back.png"></div>
+                    <div class="playpause-track px-4 pt-0 pb-0" onclick="playpauseTrack()"><img width="50px" src="../assets/play.png"></div>
+                    <div class="next-track pt-2 pb-2" onclick="nextTrack()"><img width="50px" src="../assets/next.png"></div>
                 </div>
                 <div class="slider_container">
                     <i class="fa fa-volume-down"></i>
@@ -273,7 +273,7 @@
                 isPlaying = true;
 
                 // Replace icon with the pause icon
-                playpause_btn.innerHTML = '<i class="fa fa-solid fa-pause fa-2x"></i>';
+                playpause_btn.innerHTML = '<img width="50px" src="../assets/pause.png">';
             }
 
             function pauseTrack() {
@@ -281,7 +281,7 @@
                 isPlaying = false;
 
                 // Replace icon with the play icon
-                playpause_btn.innerHTML = '<i class="fa fa-solid fa-play fa-2x"></i>';;
+                playpause_btn.innerHTML = '<img width="50px" src="../assets/play.png">';;
             }
 
             function nextTrack() {
