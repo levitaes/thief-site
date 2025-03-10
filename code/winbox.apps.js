@@ -32,10 +32,10 @@ function videosApp () {
         icon: "assets/play.png",
         x: "center",
         y: "center",
-        width: "55%",
+        width: "600px",
+        height: "540px",
         minwidth: "500px",
-        minheight: "300px",
-        height: document.body.clientWidth/2.5,
+        minheight: "450px",
         url: "apps/videos.app.html",
     });
 }
