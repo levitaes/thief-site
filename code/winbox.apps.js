@@ -68,6 +68,18 @@ function trashApp () {
     });
 }
 
+function notesApp () {
+    new WinBox({
+        title: "Notes",
+        icon: "assets/notes.png",
+        x: "center",
+        y: "center",
+        width: "550px",
+        height: "500px",
+        url: "apps/notes.app.html",
+    });
+}
+
 function uniApp () {
     new WinBox({
         title: "h-da",
