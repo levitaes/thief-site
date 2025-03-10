@@ -4,23 +4,73 @@
         <title>files</title>
         <link href="../extensions/bootstrap.css" rel="stylesheet" >
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="../theme/styles.css">
         <style>
             a {
                 color: black;
                 text-decoration: none; /* no underline */
             }
             a:hover {color: black}
+            .line-vertical { 
+                border-right: 2px solid black; 
+                position: absolute; 
+                z-index: -1; 
+            }            
+            .line-horizontal { 
+                border-bottom: 2px solid black; 
+                position: absolute; 
+                z-index: -1; 
+            }
+
         </style>
     </head>
     <body class="content bg-light">
-        <div class="container mt-2">
+        <div class="container mt-2 text-center">
             <div class="row">
-                <div class="col">main</div>
+                <div class="col"></div>
+                <div class="col">
+                    <div onclick="window.open('https://h-da.de');" class="app">
+                        <img src="../assets/items.png" alt="Link-File">
+                        <br><label>Homepage</label>
+                    </div>
+                </div>
+                <div class="col"></div>
             </div>
+            <div class="line-vertical" style="top: 95px; left: 265px; height: 25px; "></div>
             <div class="row">
-                <col class="col">sub</div>
-                <col class="col">sub</div>
-                <col class="col">sub</div>
+                <div class="col"></div>
+                <div class="col">
+                    <div onclick="window.open('https://fbi.h-da.de');" class="app">
+                        <img src="../assets/items.png" alt="Link-File">
+                        <br><label>FBI</label>
+                    </div>
+                </div>
+                <div class="col"></div>
+            </div>
+            <div class="line-vertical" style="top: 180px; left: 87px; height: 40px; "></div>
+            <div class="line-horizontal" style="top: 180px; left: 87px; width: 160px; "></div>
+            <div class="line-vertical" style="top: 195px; left: 265px; height: 25px; "></div>
+            <div class="line-horizontal" style="top: 180px; right: 87px; width: 160px; "></div>
+            <div class="line-vertical" style="top: 180px; right: 87px; height: 40px; "></div>
+            <div class="row">
+                <div class="col">
+                    <div onclick="window.open('http://obs.fbi.h-da.de');" class="app">
+                        <img src="../assets/items.png" alt="Link-File">
+                        <br><label>OBS</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div onclick="window.open('https://webmail.stud.h-da.de');" class="app">
+                        <img src="../assets/items.png" alt="Link-File">
+                        <br><label>Mail</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <div onclick="window.open('http://lernen.h-da.de');" class="app">
+                        <img src="../assets/items.png" alt="Link-File">
+                        <br><label>Moodle</label>
+                    </div>
+                </div>
             </div>
         </div>
     </body>

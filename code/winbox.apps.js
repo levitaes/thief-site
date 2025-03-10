@@ -61,7 +61,11 @@ function uniApp () {
         x: "center",
         y: "center",
         width: "550px",
-        height: "500px",
+        height: "370px",
+        minwidth: "550px",
+        minheight: "370px",
+        maxwidth: "550px",
+        maxheight: "370px",
         url: "apps/uni.app.html",
     });
 }
